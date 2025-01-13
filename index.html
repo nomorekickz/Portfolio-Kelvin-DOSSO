@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelvin Dosso - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 32, 39, 0.9);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff9800;
+        }
+
+        section {
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        h1, h2 {
+            margin: 0 0 1rem;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .animated-title {
+            font-size: 4rem;
+            font-weight: bold;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-button {
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: #ff9800;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1);
+            background: #ffc107;
+        }
+
+        .skills-bar {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .skill {
+            margin-bottom: 2rem;
+        }
+
+        .progress {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 20px;
+            background: linear-gradient(to right, #ff9800, #f44336);
+            animation: growBar 2s ease-in-out;
+        }
+
+        .project-image {
+            margin-top: 2rem;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .project-image:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #111;
+            padding: 2rem;
+            text-align: center;
+            color: #bbb;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ff9800;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#home">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#skills">Compétences</a>
+        <a href="e5.html">Projet E5</a>
+        <a href="veille.html">Veille Technologique</a>
+        <a href="cv.html">CV</a>
+        <a href="e4.html">Projets E4</a>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1 class="animated-title">Kelvin Dosso</h1>
+        <p class="subtitle">Élève en BTS SIO - Passionné par les systèmes et réseaux</p>
+        <a href="#about" class="cta-button">Découvrir mon parcours</a>
+    </section>
+
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <p>Je suis Kelvin Dosso, étudiant en BTS SIO option SISR, passionné par l'informatique et l'innovation technologique. Avec des bases solides en programmation (Python, CSS, HTML, Java) et un fort intérêt pour l'univers du cloud, je me distingue par ma curiosité et ma capacité à apprendre rapidement. Je suis une personne organisée, persévérante et créative, capable de résoudre des problèmes complexes tout en travaillant efficacement en équipe.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Compétences</h2>
+        <div class="skills-bar">
+            <div class="skill">
+                <span>HTML / CSS</span>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 75%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Python</span>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 70%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Administration Réseau</span>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project">
+        <h2>Projet E5</h2>
+        <p>Dans la situation professionnelle de la KLLT Bank, ma mission était de mettre en place un contrôleur de domaine sous Windows Server 2022 afin de gérer efficacement les utilisateurs et les ordinateurs. Les rôles principaux configurés incluent Active Directory (AD DS), DNS, DHCP et un dossier partagé SMB pour une gestion collaborative optimisée.</p>
+        <a href="e5.html" class="cta-button">Voir la documentation complète</a>
+    </section>
+
+    <section id="veille">
+        <h2>Veille Technologique</h2>
+        <p>Je m'intéresse activement aux tendances technologiques, en particulier dans le domaine du cloud hybride. Ce modèle combine les avantages du cloud public et privé, offrant une flexibilité accrue pour répondre aux besoins des entreprises. Je reste informé des avancées dans ce domaine pour anticiper les solutions les plus innovantes et adaptées.</p>
+        <a href="veille.html" class="cta-button">En savoir plus</a>
+    </section>
+
+    <footer>
+        © 2025 Kelvin Dosso. Réalisé avec passion. <a href="#home">Retour en haut</a>
+    </footer>
+</body>
+
+</html>
+
